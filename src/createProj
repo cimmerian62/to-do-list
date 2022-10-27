@@ -1,0 +1,12 @@
+const projFactory = (title) => {
+    const arr = [];
+    const addToDo = (obj) => {
+      arr.push(obj);
+    }
+    const getTitle = () => title;
+    const getArr = () => arr;
+
+  return { getTitle, addToDo, getArr };
+};
+
+export { projFactory }
