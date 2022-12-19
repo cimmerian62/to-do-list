@@ -6,7 +6,7 @@
 body {
     height: 100%;
     width: 100%;
-    background-color: black;
+    background-color: grey;
     padding: 30px;
 }
 .main {
@@ -24,13 +24,182 @@ body {
     font-size: 50px;
     background-color: aqua;
     border-radius: 30px;
+    margin-bottom: 20px;
+    border: 5px solid black;
 }
-.header > button {
+.header button {
     font-size: 20px;
-    width: 150px;
+    width: 170px;
     height: 50px;
+    
 }
+.task,
 .project {
     border-radius: 20px;
     background-color: whitesmoke;
+    border: 3px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 30px;
 }
+.task button {
+    font-size: 20px;
+    width: 100px;
+    height: 40px;
+}
+.project button {
+    font-size: 20px;
+    width: 100px;
+    height: 40px;
+}
+.taskTitle,
+.projectTitle {
+    font-size: 40px;
+
+}
+.projModal {
+    background-color: rgb(194, 194, 245);
+    width: 400px;
+    height: 200px;
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%; 
+    margin-left: -200px;
+    margin-top: -300px;
+    border-radius: 30px;
+    border: 5px solid black;
+    padding: 20px 30px;
+    
+    
+ }
+ .taskModal {
+    background-color: rgb(194, 194, 245);
+    width: 300px;
+    height: 450px;
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%; 
+    margin-left: -200px;
+    margin-top: -300px;
+    border-radius: 30px;
+    border: 5px solid black;
+    padding: 20px 30px;
+    
+ }
+
+ .editTaskModal {
+    background-color: rgb(194, 194, 245);
+    width: 300px;
+    height: 450px;
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%; 
+    margin-left: -200px;
+    margin-top: -300px;
+    border-radius: 30px;
+    border: 5px solid black;
+    padding: 20px 30px;
+    
+ }
+ .taskViewModal {
+    background-color: rgb(194, 194, 245);
+    width: 400px;
+    height: 450px;
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%; 
+    margin-left: -200px;
+    margin-top: -300px;
+    border-radius: 30px;
+    border: 5px solid black;
+    padding: 20px 30px;
+    
+ }
+ .taskViewModal > div {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    height: 80%;
+ }
+ 
+ #close-modal {
+     margin-left: 100%;
+     width: 20px;
+     
+ }
+ #close-edit-modal {
+    margin-left: 100%;
+    width: 20px;
+    
+}
+ #close-view-modal {
+    margin-left: 100%;
+    width: 20px;
+ }
+ .projModal > div{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    flex-direction: column;
+
+ }
+ #projSubmit {
+     width: 75px;
+     height: 30px;
+ }
+ textarea {
+     resize: none;
+ }
+ 
+ .taskModal > div {
+    margin-top: 20px;
+    display: flex;
+   justify-content: space-between;
+   width: 100%;
+}
+.editTaskModal > div {
+    margin-top: 20px;
+    display: flex;
+   justify-content: space-between;
+   width: 100%;
+}
+  
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+    gap: 50px;
+ }
+ form > div {
+     display: flex;
+     align-items: center;
+     gap: 10px;
+     justify-content: flex-end;
+ }
+  .taskViewHolder {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      width: 80%;
+      height: 20%;
+      flex: 1;
+      align-items: center;
+
+  }
+  .taskViewLabel {
+      font-size: 20px;
+      font-weight: bold;
+  }
+
+  #viewDesc {
+      max-width: 80%;
+      word-wrap:break-word;
+  }
