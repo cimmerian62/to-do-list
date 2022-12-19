@@ -6,6 +6,12 @@ const projList = function() {
     const getList = () => {
         return arr;
     }
+    const delProj = (index) => {
+        arr.splice(index, 1);
+    }
+    
+
+    return { addToList, getList, delProj }
 
 
 }();
