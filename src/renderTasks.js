@@ -1,6 +1,7 @@
+import { saveToLocalStorage } from "./saveTolocalStorage";
 const renderTasks = (proj) => {
     
-    const list = proj.getTasks();
+    const list = proj.arr;
     const main = document.querySelector('.main');
     main.textContent = "";
     const taskViewModal = document.querySelector('.taskViewModal')
@@ -63,6 +64,7 @@ const renderTasks = (proj) => {
                 editTaskModal.style.display = 'none';
                 editTaskForm.removeEventListener('submit', editEvent)
                 renderTasks(proj);
+                saveToLocalStorage();
 
             })
 
@@ -82,6 +84,7 @@ const renderTasks = (proj) => {
         del.addEventListener('click', () => {
             proj.delTask(i);
             renderTasks(proj);
+            saveToLocalStorage();
         })
 
         const div = document.createElement('div');

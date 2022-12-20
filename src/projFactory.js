@@ -1,17 +1,12 @@
-const projFactory = (title) => {
-    const arr = []
-    const addTask = (obj) => {
-        arr.push(obj)
-    }
-    const getTasks = () => arr;
-
-    const getTitle = () => title;
-
-    const delTask = (index) => {
-      arr.splice(index, 1);
-  }
-
-  return { addTask, getTasks, getTitle, delTask};
+function Project(title, arr) {
+    this.title = title;
+    this.arr = arr;
+};
+Project.prototype.delTask = function(index) {
+  this.arr.splice(index, 1);
+};
+Project.prototype.addTask = function(obj) {
+  this.arr.push(obj);
 };
 
-export { projFactory }
+export { Project }

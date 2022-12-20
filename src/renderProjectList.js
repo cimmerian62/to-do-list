@@ -1,5 +1,6 @@
 import { projList } from "./projList";
 import { renderProjectPage } from "./renderProjectPage";
+import { saveToLocalStorage } from "./saveTolocalStorage";
 
 const renderProjectList = () => {
     const list = projList.getList();
@@ -12,7 +13,7 @@ const renderProjectList = () => {
 
         const projTitle = document.createElement('div')
         projTitle.classList.add('projectTitle')
-        projTitle.textContent = list[i].getTitle();
+        projTitle.textContent = list[i].title;
 
         const open = document.createElement('button');
         open.textContent = "Open"
@@ -27,6 +28,7 @@ const renderProjectList = () => {
         del.addEventListener('click', () => {
             projList.delProj(i);
             renderProjectList();
+            saveToLocalStorage();
         });
 
         const btnHolder = document.createElement('div')

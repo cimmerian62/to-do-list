@@ -1,6 +1,7 @@
 import { projList } from "./projList";
-import { projFactory } from "./projFactory";
+import { Project } from "./projFactory";
 import { renderProjectList } from "./renderProjectList";
+import { saveToLocalStorage } from "./saveTolocalStorage";
 
 const renderPage = () => {
     const content = document.querySelector('.content');
@@ -78,10 +79,12 @@ const renderPage = () => {
     submitButton.addEventListener('click', () => {
         if (input.value) {
             
-            projList.addToList(projFactory(input.value));
+            projList.addToList(new Project(input.value, []));
+
             input.value = "";
             projModal.style.display = 'none';
             renderProjectList();
+            saveToLocalStorage();
         }
         
     })

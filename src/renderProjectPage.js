@@ -1,6 +1,7 @@
 import { renderPage } from "./renderPage";
 import { renderTasks } from "./renderTasks";
 import { taskFactory } from "./taskFactory";
+import { saveToLocalStorage } from "./saveTolocalStorage";
 
 const renderProjectPage = (proj) => {
     const content = document.querySelector('.content');
@@ -88,7 +89,7 @@ const renderProjectPage = (proj) => {
 
                          '<div class="header">\n'+
                              '<div class="headerTitle">\n'+
-                                 proj.getTitle() + " tasks" +
+                                 proj.title + " tasks" +
                              '</div>\n'+
                              '<div>\n'+
                                 '<button id="add-task">Add Task</button>\n'+
@@ -192,6 +193,8 @@ const renderProjectPage = (proj) => {
         proj.addTask(task);
         renderTasks(proj);
         taskForm.reset();
+        saveToLocalStorage();
+
     })
     renderTasks(proj);
     
