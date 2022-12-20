@@ -1,2 +1,2 @@
 # to-do-list
-This project is currently under construction.
+This project is a to do list. Users may add projects as well as to-dos for each project. The to-dos may contain a title, description, due date, and priority. To-dos and projects may be deleted and to-dos may be edited. This project utilizes webpack and ES6 modules. Local storage is also utilized to allow data entered to persist after the page is closed or reloaded
